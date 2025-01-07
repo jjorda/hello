@@ -14,9 +14,9 @@ app.get('/', (req, res) => {
 })
 
 const transporter = nodemailer.createTransport({
-  port: 465,
+  port: process.env.MAIL_PORT,
   host: process.env.MAIL_HOST,
-  secure: true, // true for port 465, false for other ports
+  secure: process.env.MAIL_SECURE, 
   auth: {
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASS,
