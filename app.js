@@ -7,6 +7,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 const port = 3005
+process.title = "hello";
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -44,4 +45,3 @@ app.post('/contact', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
