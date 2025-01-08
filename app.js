@@ -30,8 +30,7 @@ app.post('/contact', (req, res) => {
       from: process.env.MAIL_USER,
       to: process.env.MAIL_TO,
       subject: subject,
-      text: text,
-      html: '<b>Hey there! </b><br> This is our first message sent with Nodemailer<br/>',
+      html: text,
   };
 
   transporter.sendMail(mailData, (error, info) => {
