@@ -7,7 +7,7 @@ require('dotenv').config()
 
 const app = express()
 var corsOptions = {
-  origin: ["http://play.monjour.es/", "https://play.monjour.es/"],
+  origin: ["https://play.monjour.es","https://monjour.es"],
   optionsSuccessStatus: 200 // For legacy browser support
 }
 
